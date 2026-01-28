@@ -1,0 +1,4 @@
+*.csv
+data_csv/
+data_outputs/
+.DS_Store
