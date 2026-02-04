@@ -2,19 +2,19 @@
 
 Analysis of affective polarization among college students.
 
-## 🔒 Data Privacy
+## Data Privacy
 Raw survey data NOT included per IRB protocol. Only analysis scripts and aggregate visualizations provided.
 
-## 📊 Analyses
+##  Analyses
 - Affective polarization (feeling thermometers)
 - Moral identity and partisan sorting
 - Race × Party interactions
 - Gender differences
 
-## 🛠️ Requirements
+##  Requirements
 Python 3.9+, pandas, numpy, matplotlib, seaborn, scipy
 
-## 📁 Structure
+## Structure
 - `analysis_scripts/` - Python analysis code
 - `visualizations/` - Aggregate charts (no individual data)
 
