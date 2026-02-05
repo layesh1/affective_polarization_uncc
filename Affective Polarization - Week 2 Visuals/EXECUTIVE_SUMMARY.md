@@ -64,7 +64,7 @@ Democrats are significantly more supportive of free speech rights on campus than
 
 ---
 
-## 🔗 Relationship Between Polarization and Free Speech Attitudes
+## Relationship Between Polarization and Free Speech Attitudes
 
 ### Do more polarized individuals support restricting free speech?
 
