@@ -112,11 +112,11 @@ All aversion questions (Q135-Q140) were checked for proper scaling:
 - **Sample**: UNC Charlotte students (N = 779) may not generalize to national population
 - **Cross-Sectional**: Cannot determine causality or temporal dynamics
 - **Self-Report**: Social desirability bias possible
-- **Unbalanced Groups**: More Democrats (437) than Republicans (130)
+- **Unbalanced Groups**: More Democrats (437) than Republicans (130), also Independents were not given polarization questions
 
 ### Future Directions
 
-1. Investigate mechanisms driving asymmetric polarization
+1. Investigate mechanisms driving asymmetric polarization, especially in general ed classes. 
 2. Examine longitudinal changes in polarization over college career
 3. Test interventions to reduce social distance between groups
 4. Explore role of campus climate in shaping political attitudes

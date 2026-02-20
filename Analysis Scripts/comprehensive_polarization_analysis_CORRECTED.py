@@ -1,6 +1,7 @@
 """
 CORRECTED Comprehensive Polarization Analysis
 CRITICAL FIX: Proper reversal logic for ALL scales
+FREE SPEECH NOW CORRECTLY CODED
 """
 
 import pandas as pd
@@ -139,7 +140,7 @@ df['Q140_scaled'] = reverse_5point(df['Q140'])  # REVERSED: high liking becomes 
 
 print("\n2. FREE SPEECH QUESTIONS (Q92-Q106) - 1-7 Scale")
 print("-" * 80)
-print("GOAL: Create index where HIGH score = MORE support for restrictions")
+print("GOAL: Create index where HIGH score = MORE support for FREE SPEECH")
 print("Scale: 1=Strongly Agree, 7=Strongly Disagree")
 print("\nPRO-FREEDOM Questions (support free speech):")
 
@@ -154,9 +155,9 @@ freedom_questions = {
 
 for q, desc in freedom_questions.items():
     print(f"\n{q}: '{desc}'")
-    print(f"  → Strongly Agree (1) = Support freedom = LOW restriction support")
-    print(f"  → Strongly Disagree (7) = Oppose freedom = HIGH restriction support")
-    print(f"  → KEEP AS IS (1=low restriction, 7=high restriction) ✓")
+    print(f"  → Strongly Agree (1) = Support freedom = HIGH free speech support")
+    print(f"  → Strongly Disagree (7) = Oppose freedom = LOW free speech support")
+    print(f"  → MUST REVERSE: 1 becomes 7 (high support) ✓")
 
 print("\n\nPRO-RESTRICTION Questions (oppose free speech):")
 
@@ -172,18 +173,18 @@ restriction_questions = {
 
 for q, desc in restriction_questions.items():
     print(f"\n{q}: '{desc}'")
-    print(f"  → Strongly Agree (1) = Support restriction = HIGH restriction support")
-    print(f"  → Strongly Disagree (7) = Oppose restriction = LOW restriction support")
-    print(f"  → MUST REVERSE: 1 becomes 7 (high restriction) ✓")
+    print(f"  → Strongly Agree (1) = Support restriction = LOW free speech support")
+    print(f"  → Strongly Disagree (7) = Oppose restriction = HIGH free speech support")
+    print(f"  → KEEP AS IS (1=low support, 7=high support) ✓")
 
 # Apply free speech scaling
-# Pro-freedom: KEEP AS IS (1=support freedom=low restriction, 7=oppose freedom=high restriction)
+# Pro-freedom: REVERSE (1=support freedom becomes 7=high support)
 for q in freedom_questions.keys():
-    df[f'{q}_scaled'] = df[q]  # KEEP AS IS
-
-# Pro-restriction: REVERSE (1=support restriction becomes 7=high restriction)
-for q in restriction_questions.keys():
     df[f'{q}_scaled'] = reverse_7point(df[q])  # REVERSE
+
+# Pro-restriction: KEEP AS IS (7=oppose restriction=high support)
+for q in restriction_questions.keys():
+    df[f'{q}_scaled'] = df[q]  # KEEP AS IS
 
 print("\n\n3. TRUST/DISTRUST QUESTIONS (Q110-Q122) - 1-7 Scale")
 print("-" * 80)
@@ -285,9 +286,9 @@ df['affective_polarization_R'] = df[['moral_index_R', 'othering_index_R',
 df['affective_polarization_D'] = df[['moral_index_D', 'othering_index_D', 
                                        'aversion_index_D']].mean(axis=1)
 
-# Free Speech Restriction Index (pro-restriction questions reversed)
+# Free Speech SUPPORT Index (higher = more support for free speech)
 all_fs = list(freedom_questions.keys()) + list(restriction_questions.keys())
-df['free_speech_restriction_index'] = df[[f'{q}_scaled' for q in all_fs]].mean(axis=1)
+df['free_speech_support_index'] = df[[f'{q}_scaled' for q in all_fs]].mean(axis=1)
 
 # Distrust Index (pro-distrust questions reversed)
 all_trust = list(trust_questions.keys()) + list(distrust_questions.keys())
@@ -310,24 +311,24 @@ print(f"  Moral Identity:  M={rep['moral_index_R'].mean():.3f}, SD={rep['moral_i
 print(f"  Othering:        M={rep['othering_index_R'].mean():.3f}, SD={rep['othering_index_R'].std():.3f}")
 print(f"  Aversion:        M={rep['aversion_index_R'].mean():.3f}, SD={rep['aversion_index_R'].std():.3f}")
 print(f"  COMBINED INDEX:  M={rep['affective_polarization_R'].mean():.3f}, SD={rep['affective_polarization_R'].std():.3f}")
-print(f"  Free Speech Restriction: M={rep['free_speech_restriction_index'].mean():.3f}, SD={rep['free_speech_restriction_index'].std():.3f}")
+print(f"  Free Speech Support: M={rep['free_speech_support_index'].mean():.3f}, SD={rep['free_speech_support_index'].std():.3f}")
 
 print(f"\nDEMOCRATS (n={len(dem)})")
 print(f"  Moral Identity:  M={dem['moral_index_D'].mean():.3f}, SD={dem['moral_index_D'].std():.3f}")
 print(f"  Othering:        M={dem['othering_index_D'].mean():.3f}, SD={dem['othering_index_D'].std():.3f}")
 print(f"  Aversion:        M={dem['aversion_index_D'].mean():.3f}, SD={dem['aversion_index_D'].std():.3f}")
 print(f"  COMBINED INDEX:  M={dem['affective_polarization_D'].mean():.3f}, SD={dem['affective_polarization_D'].std():.3f}")
-print(f"  Free Speech Restriction: M={dem['free_speech_restriction_index'].mean():.3f}, SD={dem['free_speech_restriction_index'].std():.3f}")
+print(f"  Free Speech Support: M={dem['free_speech_support_index'].mean():.3f}, SD={dem['free_speech_support_index'].std():.3f}")
 
 print("\n" + "="*80)
 print("EXPECTATION CHECK")
 print("="*80)
 print("\nBased on political science research, we expect:")
-print("1. Democrats should score LOWER on free speech restriction index")
+print("1. Democrats should score HIGHER on free speech support index")
 print("   (more supportive of free speech)")
-print(f"   → Republicans: {rep['free_speech_restriction_index'].mean():.2f}")
-print(f"   → Democrats:   {dem['free_speech_restriction_index'].mean():.2f}")
-if dem['free_speech_restriction_index'].mean() < rep['free_speech_restriction_index'].mean():
+print(f"   → Republicans: {rep['free_speech_support_index'].mean():.2f}")
+print(f"   → Democrats:   {dem['free_speech_support_index'].mean():.2f}")
+if dem['free_speech_support_index'].mean() > rep['free_speech_support_index'].mean():
     print("   ✓ CORRECT: Democrats more supportive of free speech")
 else:
     print("   ✗ UNEXPECTED: Need to re-examine")
@@ -374,7 +375,7 @@ print("-" * 50)
 for idx, row in sample_rep.iterrows():
     orig = row['Q92']
     scaled = row['Q92_scaled']
-    interp = "Support freedom/Low restriction" if scaled < 4 else "Oppose freedom/High restriction"
+    interp = "Support freedom/High support" if scaled > 4 else "Oppose freedom/Low support"
     print(f"   {orig:.0f}    |   {scaled:.0f}   | {interp}")
 
 print("\nQ95 (Faculty should NOT discuss politics if prohibited):")
@@ -383,7 +384,7 @@ print("-" * 50)
 for idx, row in sample_rep.iterrows():
     orig = row['Q95']
     scaled = row['Q95_scaled']
-    interp = "Support restriction/High" if scaled > 4 else "Oppose restriction/Low"
+    interp = "Support restriction/Low support" if scaled < 4 else "Oppose restriction/High support"
     print(f"   {orig:.0f}    |   {scaled:.0f}   | {interp}")
 
 # ============================================================================
@@ -397,7 +398,7 @@ output_cols = ['party', 'partylean', 'party_combined', 'party_category',
                'moral_index_R', 'moral_index_D', 'othering_index_R', 'othering_index_D',
                'aversion_index_R', 'aversion_index_D',
                'affective_polarization_R', 'affective_polarization_D',
-               'free_speech_restriction_index', 'distrust_index']
+               'free_speech_support_index', 'distrust_index']
 
 scaled_cols = [col for col in df.columns if '_scaled' in col]
 output_cols.extend(scaled_cols)
