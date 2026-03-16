@@ -61,7 +61,7 @@ COMPARISONS = [
     ("ap_aversion",               "Social Aversion"),
     ("affective_polarization_index", "AP Composite Index"),
     ("FT_gap",                    "Feeling Thermometer Gap"),
-    ("free_speech_support_index", "Free Speech Support"),
+    ("free_speech_restriction_index", "Free Speech Restriction"),
     ("distrust_index",            "Out-Party Distrust"),
 ]
 

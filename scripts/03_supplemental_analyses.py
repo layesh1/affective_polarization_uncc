@@ -53,24 +53,24 @@ if "ideology" in df.columns and "party_num" in df.columns:
 
 # ─── B. FREE SPEECH × AFFECTIVE POLARIZATION ─────────────────────────────────
 
-if "free_speech_support_index" in df.columns and "affective_polarization_index" in df.columns:
+if "free_speech_restriction_index" in df.columns and "affective_polarization_index" in df.columns:
     fig, axes = plt.subplots(1, 3, figsize=(13, 4), sharey=False)
     for ax, party in zip(axes, PARTY_ORDER):
         sub = df[df["party_3cat"] == party][
-            ["free_speech_support_index", "affective_polarization_index"]
+            ["free_speech_restriction_index", "affective_polarization_index"]
         ].dropna()
         if len(sub) < 5:
             ax.set_visible(False)
             continue
-        r, p = stats.pearsonr(sub["free_speech_support_index"],
+        r, p = stats.pearsonr(sub["free_speech_restriction_index"],
                                sub["affective_polarization_index"])
-        ax.scatter(sub["free_speech_support_index"],
+        ax.scatter(sub["free_speech_restriction_index"],
                    sub["affective_polarization_index"],
                    alpha=0.45, s=20, color=PARTY_COLORS[party])
-        m, b = np.polyfit(sub["free_speech_support_index"],
+        m, b = np.polyfit(sub["free_speech_restriction_index"],
                           sub["affective_polarization_index"], 1)
-        xs = np.linspace(sub["free_speech_support_index"].min(),
-                         sub["free_speech_support_index"].max(), 100)
+        xs = np.linspace(sub["free_speech_restriction_index"].min(),
+                         sub["free_speech_restriction_index"].max(), 100)
         ax.plot(xs, m * xs + b, color="black", linewidth=1.5)
         ax.set_title(f"{party}\nr = {r:.2f}, p = {p:.3f}", fontsize=11, fontweight="bold",
                      color=PARTY_COLORS[party])

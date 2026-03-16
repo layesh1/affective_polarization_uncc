@@ -68,7 +68,7 @@ INDEX_VARS = {
     "Social Aversion (out-party)": "ap_aversion",
     "AP Index (composite)":        "affective_polarization_index",
     "Feeling Thermometer Gap":     "FT_gap",
-    "Free Speech Support":         "free_speech_support_index",
+    "Free Speech Restriction":     "free_speech_restriction_index",
     "Distrust Index":              "distrust_index",
 }
 

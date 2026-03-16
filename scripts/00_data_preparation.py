@@ -251,7 +251,10 @@ for col in RESTRICTION_COLS:
     df[f"{col}_s"] = df[col]               # kept as-is
 
 FS_SCALED = [f"{c}_s" for c in FREEDOM_COLS + RESTRICTION_COLS]
-df["free_speech_support_index"] = df[FS_SCALED].mean(axis=1)
+# NOTE: All _s items point in the RESTRICTION direction.
+# Higher score = more supportive of restricting speech.
+# Democrats score lower (more pro-free-speech); Republicans score higher (more pro-restriction).
+df["free_speech_restriction_index"] = df[FS_SCALED].mean(axis=1)
 
 
 # ─── 10. TRUST / DISTRUST ITEMS (1–7 agree scale) ────────────────────────────
@@ -320,7 +323,7 @@ SAVE_COLS = [
     "aversion_index_R", "aversion_index_D",
     "ap_moral", "ap_othering", "ap_aversion", "affective_polarization_index",
     "FT_Republicans", "FT_Democrats", "FT_inparty", "FT_outparty", "FT_gap",
-    *FS_SCALED, "free_speech_support_index",
+    *FS_SCALED, "free_speech_restriction_index",
     *DISTRUST_SCALED, "distrust_index",
     "ideology_num",
     "Q62",        # race/ethnicity
