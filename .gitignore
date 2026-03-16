@@ -3,6 +3,9 @@ data/
 *.csv
 !data/.gitkeep
 
+# Keep generated visualizations tracked
+!visualizations/*.png
+
 # Python
 __pycache__/
 *.py[cod]
