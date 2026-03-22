@@ -25,6 +25,9 @@ SCRIPTS = [
     ("Figure 8  — Ideology distribution",   "scripts/figures/fig08_ideology_distribution.py"),
     ("Figure 9  — Distrust violin",         "scripts/figures/fig09_distrust_violin.py"),
     ("Figure 10 — FT vs AP validation",     "scripts/figures/fig10_ft_vs_ap_validation.py"),
+    ("Regression analysis",                 "scripts/04_regression_analysis.py"),
+    ("Figure 11 — Regression coef plot",   "scripts/figures/fig11_regression_coef_plot.py"),
+    ("Figure 12 — Within-party scatter",   "scripts/figures/fig12_within_party_scatter.py"),
 ]
 
 print("=" * 60)
