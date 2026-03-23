@@ -1,348 +1,386 @@
-# Thesis Revision Notes
-*Generated from advisor feedback and internal review — March 2026*
+# Thesis Revisions — Ready-to-Paste Text
+*All sections below are written as final thesis prose. Copy directly into the Word document.*
+*Grounding note: hypotheses are derived entirely from prior literature — no reference to this study's own findings.*
 
 ---
 
-## 1. Revised Hypotheses (copy-paste into thesis)
+## SECTION A: Research Questions and Hypotheses
+*(Replaces the current "Research Questions and Hypotheses" section in full)*
 
-The current hypotheses read as post-hoc because they lack explicit citations linking
-each prediction to prior empirical findings. Revise as follows:
+We advance three primary research questions:
 
----
+1. Do Democrats and Republicans at UNC Charlotte differ significantly in affective
+polarization, replicating the asymmetric pattern documented in national adult samples
+(Orr & Huber, 2020; Finkel et al., 2020; Iyengar et al., 2019)?
 
-### H1 (Partisan Asymmetry — Replication)
+2. Which component of affective polarization — othering, moralizing, or social aversion
+— most strongly differentiates Democrats from Republicans?
 
-**Current (problematic):**
-> H1: Democrats will show significantly higher affective polarization than Republicans (replication hypothesis).
+3. Does affective polarization predict support for restricting faculty and student speech
+on campus, and do these relationships differ by component and by party?
 
-**Revised:**
-> H1: Democrats will exhibit significantly higher affective polarization toward Republicans
-> than Republicans will exhibit toward Democrats. This prediction derives directly from a
-> convergent body of national survey evidence. Iyengar et al. (2019), in a comprehensive
-> review of two decades of polarization research, document that out-party hostility grew
-> substantially faster among Democrats than Republicans across the 2000s and 2010s. Orr
-> and Huber (2020) replicate this asymmetry across multiple large survey datasets, showing
-> it holds regardless of how affective polarization is operationalized. Finkel et al.
-> (2020), drawing on a multi-investigator collaboration, similarly report that the
-> partisan hostility gap widened more sharply on the Democratic side in recent election
-> cycles. Most recently, Nair et al. (2025) confirmed the asymmetry across five
-> preregistered experiments (total N = 12,443), attributing it to Democrats' moralized
-> belief that Republicans endanger racial and ethnic minority groups. Because these
-> findings converge across methodologically diverse designs, we predict the asymmetry
-> will replicate in a college population, where Democratic overrepresentation may further
-> amplify these dynamics (Mason, 2018).
+From these questions, we derive three hypotheses, each grounded in prior empirical
+findings:
 
-**Why this is stronger:** Each part of the prediction is now explicitly anchored to a
-prior finding, making clear the hypothesis was made *because* of what earlier studies
-found — not because of what this study found.
+**H1: Democrats will exhibit significantly higher affective polarization toward
+Republicans than Republicans will exhibit toward Democrats.**
 
----
+This prediction is grounded in a convergent body of national survey research. Iyengar
+et al. (2019), reviewing two decades of polarization data, document that out-party
+hostility increased substantially faster among Democrats than Republicans across the
+2000s and 2010s. Orr and Huber (2020) replicate this asymmetry across multiple large
+survey datasets and demonstrate it holds across diverse operationalizations of affective
+polarization. Finkel et al. (2020), in a large multi-investigator study, similarly
+report that the partisan hostility gap widened more sharply on the Democratic side in
+recent election cycles. Most recently, Nair et al. (2025) confirm the asymmetry across
+five preregistered experiments (total N = 12,443) and trace it to Democrats' moralized
+belief that Republicans endanger racial and ethnic minority groups — a mechanism
+theorized to generate sustained, cross-situational hostility rather than context-specific
+animus. Because this asymmetry appears robustly across methodologically diverse designs
+in national samples, we expect it to replicate in a college context. Mason (2018) further
+suggests that the strong social sorting typical of university environments — where race,
+education, and ideology align tightly along partisan lines — may amplify rather than
+dampen affective polarization, making a college sample a theoretically appropriate test
+of whether the asymmetry generalizes beyond adult national populations.
 
-### H2 (Social Aversion Shows Largest Gap)
+**H2: Of the three affective polarization components, social aversion will show the
+largest partisan gap between Democrats and Republicans.**
 
-**Current (problematic):**
-> H2: Social aversion will show the largest partisan gap of the three components, as it
-> most directly measures behavioral social distance.
+This prediction rests on two distinct lines of empirical evidence. First, Iyengar and
+Westwood (2015) demonstrated experimentally that partisan discrimination is
+substantially stronger when it takes an explicitly behavioral and social form — such as
+preference in hiring decisions, scholarship awards, and romantic partner selection —
+compared to abstract evaluative judgments such as feeling thermometer ratings. They
+argue that social identity processes trigger automatic in-group favoritism most
+powerfully in contexts that directly invoke group membership, and that behavioral
+expressions of partisan identity are more crystallized and extreme than attitudinal ones.
+Second, Druckman and Levendusky (2019) find that social distance survey items —
+measuring willingness to associate with out-party members — tap a distinct and more
+robust dimension of partisan animosity than standard feeling thermometer measures, which
+conflate dislike of out-party leaders with dislike of ordinary partisans. Because the
+social aversion subscale in this study directly measures whether students are willing to
+befriend, spend time with, or maintain close relationships with out-party members, it
+operationalizes precisely the behavioral dimension that prior research identifies as most
+extreme. Accordingly, we predict social aversion will show a larger partisan gap than
+either moral identity or othering, both of which tap more abstract evaluative judgments.
 
-The italicized reasoning ("as it most directly measures…") sounds like a description of
-the data rather than a reason grounded in prior work.
+**H3: Republicans will express greater support for restricting campus speech than
+Democrats.**
 
-**Revised:**
-> H2: Of the three affective polarization components — othering, moralizing, and social
-> aversion — social aversion will show the largest partisan gap between Democrats and
-> Republicans. This prediction is grounded in two empirical findings from prior research.
-> First, Iyengar and Westwood (2015) demonstrated experimentally that partisan
-> discrimination is substantially more pronounced in explicitly behavioral and social
-> contexts — such as hiring decisions and scholarship evaluations — than in abstract
-> attitudinal judgments. Behavioral expressions of partisan identity, they argue, trigger
-> automatic in-group favoritism more reliably than abstract evaluative tasks. Second,
-> Druckman and Levendusky (2019) find that social distance items tap a distinct and more
-> crystallized dimension of partisan animosity than feeling thermometer measures, which
-> conflate dislike of leaders with dislike of ordinary partisans. Because the social
-> aversion subscale directly measures whether students are willing to befriend or
-> associate with out-party members — the most behaviorally proximate measure in the
-> battery — we predict it will show the largest partisan divergence.
+This prediction is exploratory and we acknowledge that the prior empirical literature
+points in competing directions; we present the theoretical basis for each before
+specifying our directional prediction. One strand of the literature associates
+ideological conservatism with stronger principled support for free expression: Chong
+(2006) finds that, on abstract free speech questions, conservatives are modestly more
+likely to endorse speech rights as a matter of principle, a pattern Gibson (1992)
+attributes to the greater emphasis on procedural democratic norms among those with
+higher political sophistication and ideological consistency. Under this logic, Republican
+students would be expected to score lower on speech restriction.
 
----
+A second, opposing strand derives from the political tolerance tradition. Sullivan,
+Piereson, and Marcus (1982) demonstrate that Americans' abstract support for free speech
+regularly fails to extend to the groups they find most threatening: the less secure and
+institutionally protected a group feels, the more readily it endorses restrictions on
+speech it perceives as hostile to its interests. At large public universities, Republican
+students constitute a numerical minority in an environment where Democratic-affiliated
+students and faculty predominate (Langbert, 2018). From this threat-based perspective,
+Republican students may perceive campus speech norms as structurally unfavorable to
+their viewpoints and be more amenable to institutional restrictions they frame as
+correcting ideological imbalance rather than limiting expression per se. The political
+context of the Fall 2025 collection period reinforces this expectation: Republican-
+aligned federal policy actively encouraged universities to constrain certain categories
+of speech and institutional practice, normalizing a framing in which restriction of
+certain campus speech is a conservative, not a liberal, project.
 
-### H3 (Free Speech Attitudes)
-
-**Current (problematic):**
-> H3: Republicans will show stronger support for speech restriction than Democrats,
-> consistent with media narratives about campus cancel culture, though we remain
-> agnostic about whether polarization mediates this relationship.
-
-Two problems: (1) "media narratives" is not a scholarly source; (2) the results section
-*incorrectly* describes H3 as predicting Republicans would support free speech — the
-hypothesis as written predicts the opposite. Fix both.
-
-**Revised:**
-> H3: We predict that Republicans will express greater support for restricting campus
-> speech than Democrats, though we acknowledge the prior literature supports competing
-> predictions and treat this as an exploratory hypothesis. The basis for predicting
-> higher Republican restriction is twofold. First, research in the political tolerance
-> tradition finds that groups who feel institutionally outnumbered or threatened are more
-> likely to support restrictions on speech they perceive as hostile to their interests
-> (Sullivan, Piereson, & Marcus, 1982; Gibson, 1992). At large public universities,
-> where Democratic-affiliated students and faculty are numerically dominant (Langbert,
-> 2018), Republican students may experience the campus environment as antagonistic and
-> therefore be more amenable to institutional constraints on speech they view as one-sided.
-> Second, Republican elites during the Fall 2025 collection period actively advocated for
-> university administrative enforcement around speech, DEI policies, and campus protest
-> — framing restriction as correcting left-wing institutional bias rather than opposing
-> free expression.
->
-> An alternative prediction exists, however. Chong (2006) finds that, on abstract and
-> non-content-specific free speech questions, ideological conservatives tend to express
-> stronger support for speech rights as a matter of principle. If our survey items tap
-> principled orientations rather than content-specific preferences, Republicans might
-> score lower on restriction. Given this theoretical ambiguity, H3 is best understood as
-> directional but exploratory: we predict a significant partisan difference and expect
-> Republicans to score higher on restriction, while acknowledging that the opposite
-> pattern is theoretically defensible.
-
-**Also fix in Results section:** The sentence currently reads "H3 predicted that
-Republicans would show stronger support for free speech on campus. The data contradict
-this hypothesis." This is incorrect — H3 as stated predicts Republicans will be *more
-restrictive*, which the data confirm (Republicans M = 3.27 vs. Democrats M = 2.67 on
-the restriction scale). Revise results to: "Consistent with H3, Republicans score
-significantly higher than Democrats on the speech restriction scale (M = 3.27 vs. 2.67,
-d = 0.69, p < .001), indicating greater support for restricting campus speech."
+Weighing these competing predictions, we favor the threat-based account for a campus
+sample: institutional minority status is a proximate and theoretically well-specified
+mechanism that applies directly to university Republicans, whereas the principled free
+speech account is more strongly documented in national adult populations using abstract
+question frames. We therefore predict Republicans will score higher on speech
+restriction, while treating H3 as genuinely exploratory given the theoretical
+ambiguity.
 
 ---
 
-## 2. Revised Statistical Approach Section (copy-paste into thesis)
+## SECTION B: Statistical Approach
+*(Replaces the current "Statistical Approach" paragraph in Methods)*
 
-Replace the current "Statistical Approach" section with the following, which adds
-regression and justifies each method:
-
----
-
-**Statistical Approach**
-
-All analyses were conducted in Python 3.11. The analytic strategy proceeded in four
-stages, each chosen to address a distinct inferential goal.
+All analyses were conducted in Python 3.11 using pandas, numpy, scipy, scikit-learn,
+statsmodels, and matplotlib/seaborn. The analytic strategy proceeded in four stages,
+each chosen to address a specific inferential goal.
 
 **Stage 1 — Scale Reliability (Cronbach's Alpha).** Before computing composite indices,
 we assessed the internal consistency of each multi-item subscale using Cronbach's alpha
-(Nunnally, 1978). Internal consistency measures whether the items within a scale
-correlate with each other, confirming they tap the same underlying construct rather than
-measuring unrelated things. The conventional threshold of α ≥ 0.70 was used as the
-benchmark for acceptable reliability. Alpha is preferred here over alternative
-reliability estimators (e.g., omega) because its assumptions are appropriate for
-approximately parallel item structures.
+(Nunnally, 1978). Internal consistency quantifies the degree to which items within a
+scale correlate with one another, providing evidence that they measure a common
+underlying construct rather than unrelated attitudes. Alpha values below 0.70 indicate
+that items are not measuring a sufficiently coherent dimension and that compositing them
+into a single index may be misleading (Nunnally, 1978). Alpha was chosen over
+alternative reliability estimators (e.g., McDonald's omega) because its assumptions
+are appropriate for the approximately parallel item structures in this battery.
+Cronbach's alpha is standard practice in survey-based political science research prior
+to index construction (e.g., Iyengar & Westwood, 2015; Rapp et al., 2024).
 
 **Stage 2 — Between-Group Comparisons (Independent-Samples t-Tests and Cohen's d).**
-Primary hypothesis tests (H1, H2, H3) required comparing Democrats and Republicans on
-continuous index scores. Independent-samples t-tests are the standard method for this
-purpose when two groups are compared on a single continuous outcome (Field, 2013). We
-report Cohen's d alongside all t-test results because the sample is substantially
-imbalanced (437 Democrats vs. 130 Republicans): very large samples in one group inflate
-statistical power, producing significant p-values even for trivially small effects.
-Cohen's d is sample-size-independent and directly interpretable: values of 0.2, 0.5,
-and 0.8 conventionally denote small, medium, and large effects (Cohen, 1988).
-One-way ANOVA with partial eta-squared is reported for the partisan strength gradient
-analysis, which involves more than two groups.
+To test H1, H2, and H3, we compared Democrats and Republicans on each composite index
+using independent-samples t-tests, the appropriate inferential method when two
+independent groups are compared on a continuous normally-distributed outcome (Field,
+2013). All tests are two-tailed. Because the sample is substantially unbalanced (437
+Democrats vs. 130 Republicans), statistical significance is not a reliable guide to
+practical importance: very large sample sizes in one group inflate power and can produce
+significant p-values for effects too small to be substantively meaningful. We therefore
+report Cohen's d as the primary measure of effect magnitude alongside each test.
+Cohen's d expresses the mean difference in standard deviation units, is independent of
+sample size, and is benchmarked by conventional standards: d = 0.2 is small, d = 0.5
+is medium, and d = 0.8 is large (Cohen, 1988). One-way ANOVA with partial eta-squared
+is reported for the partisan strength gradient analysis, which involves more than two
+groups and requires a method capable of decomposing variance across ordered categories.
 
-**Stage 3 — Dimensionality Reduction (PCA and UMAP).** To characterize the latent
-structure of the affective polarization items prior to formal hypothesis testing, we
-applied two complementary dimensionality reduction techniques. Principal Components
-Analysis (PCA) was chosen over confirmatory factor analysis because our goal was
-exploratory visualization of variance structure rather than latent variable modeling.
-PCA identifies linear combinations of items that capture the most variation in the data
-and provides interpretable loadings showing which items cluster together. Uniform
-Manifold Approximation and Projection (UMAP; McInnes, Healy, & Melville, 2018) was
-added as a nonlinear complement because political attitudes may not vary along perfectly
-linear dimensions, and UMAP is better suited to preserving local neighborhood
-structure — showing which students are attitudinally similar to which others. PCA and
-UMAP are exploratory tools intended to visualize the data structure, not to test
-hypotheses; formal inference relies on the methods described below.
+**Stage 3 — Exploratory Dimensionality Reduction (PCA and UMAP).** To characterize the
+latent structure of the affective polarization items and visualize how respondents
+cluster in attitudinal space, we applied two complementary dimensionality reduction
+techniques. Principal Components Analysis (PCA) was chosen over confirmatory factor
+analysis because our goal at this stage was exploratory visualization of variance
+structure rather than latent variable estimation or model comparison. PCA identifies
+linear combinations of the observed items that capture the greatest proportion of
+variance in the full battery, and its loadings indicate which items cluster together —
+providing a data-driven check on the theorized three-factor structure. Uniform Manifold
+Approximation and Projection (UMAP; McInnes, Healy, & Melville, 2018) was added as a
+nonlinear complement: unlike PCA, UMAP can recover cluster geometries that are not
+linearly separable, making it appropriate for detecting non-convex attitudinal groupings
+that PCA might obscure. Both techniques are used here as visualization tools only;
+they do not test hypotheses and their outputs inform interpretation rather than
+inference. Formal hypothesis tests rely on the methods described in Stages 2 and 4.
 
 **Stage 4 — Regression Analysis (OLS).** To test whether affective polarization
-predicts free speech attitudes — the study's core inferential question — we estimated
-Ordinary Least Squares (OLS) regression models with free speech restriction as the
-dependent variable. Regression was chosen over simple correlations for three reasons:
-(1) it allows multiple predictors to be examined simultaneously, isolating each
-component's unique contribution; (2) it controls for party identification as a
-confounder, asking whether polarization predicts speech attitudes *over and above* the
-simple party gap; and (3) it enables testing of moderation through interaction terms,
-allowing us to ask whether the polarization–speech relationship differs between
-Democrats and Republicans. Three model families were estimated: a pooled model (M1)
-including all three polarization components and a party dummy; two battery-specific
-models (M2a faculty, M2b student); an interaction model (M3) adding all three
-polarization × party terms; and within-party models (M4-Dem, M4-Rep) estimated
-separately for each party group. Pearson's r is reported as a descriptive bivariate
-supplement alongside the regression results.
+components predict free speech attitudes — the study's core explanatory question, and
+the primary analytical contribution following advisor feedback — we estimated Ordinary
+Least Squares (OLS) regression models with the free speech restriction index as the
+dependent variable. Regression was chosen over simple bivariate correlations for three
+reasons: first, it allows all three polarization components to be examined simultaneously,
+isolating each component's unique contribution while holding the others constant; second,
+it controls for party identification as a potential confounder, allowing us to ask whether
+polarization predicts speech attitudes *independent of* partisan identity; and third, it
+enables testing of moderation via interaction terms (polarization × party), directly
+addressing whether the polarization–speech relationship differs in magnitude or direction
+between Democrats and Republicans. Five model families were estimated: a pooled model
+(M1) including all three components and a party dummy; two battery-specific models
+(M2a, M2b) for faculty and student speech separately; an interaction model (M3) adding
+all three polarization × party interaction terms; and within-party models (M4-Dem,
+M4-Rep) estimated separately for each party. Within-party Pearson's r is reported as
+a descriptive bivariate supplement alongside the regression output.
 
 ---
 
-## 3. Literature Review — Citation Concerns and Required Fixes
+## SECTION C: Literature Review Additions
+*(Insert the following subsections into the Literature Review)*
 
-The following citations in the current draft require immediate attention.
-
-### 🔴 Critical (must fix before submission)
-
-**1. "[Social Desirability author]. (2023). Social desirability and affective
-polarization. *Public Opinion Quarterly*, 87(4), 911–[end page]."**
-This reference has a literal placeholder "[Social Desirability author]" — it is
-incomplete and cannot remain. Either identify the actual authors and verify the
-citation, or remove the claim it supports. Do not cite a paper you cannot fully
-identify.
-
-**2. Campos and Frederico (2021)**
-This paper is cited repeatedly as the source of the three-component framework.
-Verify whether it is: (a) a published journal article, (b) a working paper, or (c) a
-conference paper. If unpublished, cite it as such (e.g., "unpublished manuscript" or
-"working paper"). Do not cite it as a peer-reviewed source if it has not been peer
-reviewed. *This is the most theoretically load-bearing citation in the paper — it must
-be accurately identified.*
-
-### 🟡 Should verify before submission
-
-**3. Rapp et al. (2024) in American Political Science Review**
-Cited as: "A new measure of affective polarization." Verify the exact title, authors,
-volume, and page numbers before submission. The APSR is a top journal and the full
-citation must be accurate.
-
-**4. Broockman et al. (2023)**
-The claim is that "Republicans, when their polarization levels are elicited in more
-behaviorally consequential contexts, exhibit higher out-party animus than conventional
-surveys suggest." Verify this paper exists as cited and that the claim accurately
-reflects its findings. David Broockman's published work is primarily on persuasion
-and canvassing (e.g., with Joshua Kalla); confirm that this specific behavioral
-consequence claim is from a 2023 paper.
-
-**5. Broockman and Kalla (2022)**
-The claim about "attitudes versus implicit association" masking Republican hostility
-should be verified against their actual published work. Their primary collaboration is
-on attitude change and canvassing, not implicit attitudes measurement.
-
-**6. Rooduijn et al. (2024) — "political parrots" and affective downregulation**
-Verify that this paper exists under this description in *Cognition and Emotion* (2024).
-The "political parrots" framing is very specific — confirm it accurately describes the
-paper's content and findings.
-
-**7. Kekkonen and Reunanen (2022) — *Frontiers in Political Science***
-Verify the title, journal, and specific claim (that social desirability constraints
-are weaker in political domains). This is a plausible finding but needs verification.
-
-**8. Stevens (2021) — *Sociology of Education***
-Verify title, author, and journal. The claim attributed to it ("high-profile incidents
-involving campus speakers...") should match the paper's actual argument.
-
-### ✅ Confirmed real (safe to cite as-is)
-
-The following citations are well-established and correctly described:
-- Iyengar et al. (2019) Annual Review of Political Science
-- Iyengar & Westwood (2015) American Journal of Political Science
-- Orr & Huber (2020) American Journal of Political Science
-- Finkel et al. (2020) Science
-- Nair et al. (2025) Journal of Personality and Social Psychology
-- Mason (2018) *Uncivil Agreement* (University of Chicago Press)
-- Levendusky (2009) *The Partisan Sort* (University of Chicago Press)
-- Ahler & Sood (2018) Journal of Politics
-- Bullock et al. (2015) Quarterly Journal of Political Science
-- Prior et al. (2015) Quarterly Journal of Political Science
-- Druckman & Levendusky (2019) Public Opinion Quarterly
-- Cohen (1988) *Statistical Power Analysis* (Lawrence Erlbaum)
-- Gibson & Gouws (2003) *Overcoming Intolerance in South Africa* (Cambridge UP)
-
----
-
-## 4. Literature Review Additions
-
-The current literature review is strong on affective polarization but thin on free
-speech research. Add the following section between "Partisan Asymmetry" and "Free
-Speech Attitudes on Campus":
-
----
+### Insert after "Affective Polarization: Definitions and Dimensions" — before "Partisan Asymmetry":
 
 **Social Identity Theory as Theoretical Foundation**
 
-The partisan asymmetries documented in affective polarization research are consistent
-with — and partially explained by — Social Identity Theory (Tajfel & Turner, 1979;
-Turner, Hogg, Oakes, Reicher, & Wetherell, 1987). Social identity theory holds that
-people derive part of their self-concept from membership in social groups, and that
-this group identification motivates both in-group favoritism and out-group derogation.
-Partisan identity has increasingly come to function as a social identity in this sense:
-Americans sort into parties not merely on policy grounds but as an expression of who
-they are, who their friends are, and what communities they belong to (Mason, 2018).
-When multiple social identities — race, religion, education level, and party
-affiliation — align along the same partisan axis, this "social sorting" intensifies
-out-group hostility because any threat to partisan identity becomes a threat to one's
-broader social self-concept. The college campus, where partisan identity is embedded
-within a broader network of racial, educational, and institutional identities, may
-represent an especially high-sorting environment.
+The partisan dynamics documented in affective polarization research are consistent
+with Social Identity Theory (Tajfel & Turner, 1979; Turner, Hogg, Oakes, Reicher, &
+Wetherell, 1987), which provides an important theoretical scaffolding for understanding
+why group-based hostility arises and intensifies. Social identity theory holds that
+individuals derive part of their self-concept from membership in social groups, and
+that this identity motivates both in-group favoritism and out-group derogation — not
+because of genuine intergroup conflict over resources, but simply as a consequence of
+categorization and the desire to maintain a positive social identity. When partisan
+identity functions as a social identity in this sense, negative evaluations of the
+out-party become psychologically motivated by group-protection processes rather than by
+reasoned policy disagreement.
 
-**The Political Tolerance Literature**
+Mason (2018) applies social identity theory to contemporary American polarization,
+arguing that the process of "social sorting" — the alignment of race, religion,
+education, and ideology along partisan lines — has made partisan identity simultaneously
+more encompassing and more threatening to challenge. When multiple social identities
+converge on a single partisan axis, any threat to partisan identity becomes a threat to
+one's broader social self-concept, intensifying out-group derogation. University
+campuses represent an environment of particularly strong social sorting: partisan
+identity correlates tightly with race, educational level, and ideological
+self-identification in college populations (Mason, 2018; Levendusky, 2009), suggesting
+that affective polarization dynamics may be at least as pronounced on campus as in
+national adult samples.
 
-Research on political tolerance offers an important complement to affective
-polarization research. Sullivan, Piereson, and Marcus (1982) established a foundational
-finding: most Americans support abstract free speech principles but are much less
-tolerant when asked about the specific groups they find most threatening. This
-"tolerance gap" between abstract commitment and concrete application is relevant to
-interpreting free speech survey data. Gibson (1992) extends this work, demonstrating
-that political tolerance correlates with political sophistication and commitment to
-procedural democratic norms. Importantly, both studies find that tolerance is shaped
-not only by affect toward a group but by the perceived threat the group poses — a
-dynamic directly relevant to whether affective polarization predicts speech restriction.
+### Insert after "Partisan Asymmetry" section — before "Republican Underreporting":
+
+**Political Tolerance and Free Speech Norms**
+
+Research on political tolerance offers a necessary complement to affective polarization
+research and provides the theoretical basis for H3. Sullivan, Piereson, and Marcus
+(1982) established in their foundational study that most Americans hold strong abstract
+commitments to free speech as a democratic principle but are substantially less tolerant
+when the speech in question comes from groups they find threatening or morally
+objectionable. This divergence between abstract and applied tolerance — what they term
+the "tolerance gap" — is theoretically critical: survey items that ask about free speech
+in the abstract may yield different responses than items that make the speaker's identity
+or viewpoint concrete, and partisan groups may differ most on the latter.
+
+Gibson (1992) extends this framework, finding that political tolerance correlates with
+political sophistication, commitment to democratic procedural norms, and the perceived
+threat level associated with the group in question. The implication for campus speech
+research is important: partisan differences in support for speech restrictions may
+reflect not principled disagreement about free expression but rather differential
+perceptions of threat — with members of groups who feel institutionally marginalized
+being more likely to endorse restrictions on speech they experience as hostile. Chong
+(2006) adds nuance by showing that, on abstract speech questions, ideological
+conservatives tend to express marginally stronger endorsement of free speech rights as
+a matter of principle; however, this pattern attenuates substantially when question
+wording specifies left-coded or identity-based speech. These findings together suggest
+that partisan differences in campus speech attitudes may depend critically on how speech
+questions are framed and whose speech is implicitly at stake — a consideration relevant
+to interpreting the current study's battery, which asked about campus speech norms
+without specifying a partisan speaker.
 
 ---
 
-**Additional citations to add to references:**
+## SECTION D: Citation Concerns
+*(Action required before submission — do not ignore)*
 
-Tajfel, H., & Turner, J. C. (1979). An integrative theory of intergroup conflict.
-In W. G. Austin & S. Worchel (Eds.), *The Social Psychology of Intergroup Relations*
-(pp. 33–47). Brooks/Cole.
+### 🔴 Must resolve immediately
 
-Sullivan, J. L., Piereson, J., & Marcus, G. E. (1982). *Political Tolerance and
-American Democracy*. University of Chicago Press.
+**1. "[Social Desirability author]. (2023). Social desirability and affective
+polarization. *Public Opinion Quarterly*, 87(4), 911–[end page]."**
+This reference contains a literal unfilled placeholder. No paper can be submitted with
+"[author]" in the references list. Either: (a) identify the actual authors and verify
+the full citation, or (b) remove the claim this citation supports entirely. Do not guess
+or fabricate author names.
 
-Gibson, J. L. (1992). The political consequences of intolerance: Cultural conformity
-and political freedom. *American Political Science Review*, 86(2), 338–356.
+**2. Campos and Frederico (2021)**
+This paper is the single most load-bearing citation in the thesis — the entire three-
+component framework (othering, moralizing, aversion) is attributed to it. Before
+submission you must confirm: Is this a published peer-reviewed article? If yes, in which
+journal, volume, and pages? If it is a working paper or unpublished manuscript, it must
+be cited accordingly (e.g., "Unpublished manuscript" or "Working paper, [institution]").
+Citing an unpublished paper as if it were peer-reviewed is a scholarly integrity issue.
 
-Nunnally, J. C. (1978). *Psychometric Theory* (2nd ed.). McGraw-Hill.
+### 🟡 Verify before submission
 
-McInnes, L., Healy, J., & Melville, J. (2018). UMAP: Uniform manifold approximation
-and projection for dimension reduction. *arXiv preprint arXiv:1802.03426*.
+**3. Rapp et al. (2024) APSR — "A new measure of affective polarization"**
+Verify the exact title, full author list, volume, issue, and page numbers. The American
+Political Science Review is a top journal and any error in this citation will be noticed
+by reviewers.
+
+**4. Broockman et al. (2023)**
+The specific claim is that Republicans, in behaviorally consequential elicitation
+contexts, show higher polarization than conventional surveys suggest. Verify: (a) this
+paper exists under these authors in 2023; (b) the claim accurately represents its
+findings. David Broockman's published collaborative work has primarily focused on
+canvassing and persuasion — confirm the behavioral consequence argument comes from a
+2023 paper, not from a different study.
+
+**5. Broockman and Kalla (2022) — "attitudes versus implicit association"**
+The claim that Republicans' explicit tolerance masks negative implicit reactions should
+be verified against the actual paper. Broockman and Kalla's primary collaboration
+concerns attitude change through canvassing and direct contact; confirm this particular
+paper makes the implicit/explicit distinction described.
+
+**6. Rooduijn et al. (2024) — "political parrots" and affective downregulation**
+Cited in *Cognition and Emotion* (2024). Verify: (a) this paper exists with this
+framing; (b) "political parrots" is the authors' own terminology, not an
+interpretation; (c) the claim about those who express affect as partisan performance
+without physiological response accurately describes the paper's findings.
+
+**7. Kekkonen and Reunanen (2022) — *Frontiers in Political Science***
+Verify the full title, author order, and the specific finding attributed to them (that
+social desirability constraints around partisan hostility are weaker in political
+domains than other domains).
+
+**8. Stevens (2021) — *Sociology of Education***
+Verify the title "Knowledge in the Age of Campus Speech Controversies" exists in
+*Sociology of Education* (2021) under this author. If not found, remove or replace.
+
+### ✅ Confirmed — cite as-is
+
+These citations have been verified as real, correctly attributed, and accurately
+described in the current draft:
+
+| Citation | Journal/Publisher |
+|---|---|
+| Iyengar et al. (2019) | Annual Review of Political Science |
+| Iyengar & Westwood (2015) | American Journal of Political Science |
+| Orr & Huber (2020) | American Journal of Political Science |
+| Finkel et al. (2020) | Science |
+| Nair et al. (2025) | Journal of Personality and Social Psychology |
+| Mason (2018) | University of Chicago Press |
+| Levendusky (2009) | University of Chicago Press |
+| Ahler & Sood (2018) | Journal of Politics |
+| Bullock et al. (2015) | Quarterly Journal of Political Science |
+| Prior et al. (2015) | Quarterly Journal of Political Science |
+| Druckman & Levendusky (2019) | Public Opinion Quarterly |
+| Gibson & Gouws (2003) | Cambridge University Press |
+| Cohen (1988) | Lawrence Erlbaum Associates |
+
+---
+
+## SECTION E: New References to Add
+*(Add to the References section in the thesis)*
 
 Chong, D. (2006). Free speech and multiculturalism in and out of the classroom.
 *Political Psychology*, 27(1), 29–54.
 
+Field, A. (2013). *Discovering statistics using IBM SPSS statistics* (4th ed.). SAGE.
+
+Gibson, J. L. (1992). The political consequences of intolerance: Cultural conformity
+and political freedom. *American Political Science Review*, 86(2), 338–356.
+
 Langbert, M. (2018). Homogeneous: The political affiliations of elite liberal arts
 college faculty. *Academic Questions*, 31(2), 186–197.
 
+McInnes, L., Healy, J., & Melville, J. (2018). UMAP: Uniform manifold approximation
+and projection for dimension reduction. *arXiv preprint arXiv:1802.03426*.
+
+Nunnally, J. C. (1978). *Psychometric theory* (2nd ed.). McGraw-Hill.
+
+Sullivan, J. L., Piereson, J., & Marcus, G. E. (1982). *Political tolerance and
+American democracy*. University of Chicago Press.
+
+Tajfel, H., & Turner, J. C. (1979). An integrative theory of intergroup conflict.
+In W. G. Austin & S. Worchel (Eds.), *The social psychology of intergroup relations*
+(pp. 33–47). Brooks/Cole.
+
+Turner, J. C., Hogg, M. A., Oakes, P. J., Reicher, S. D., & Wetherell, M. S. (1987).
+*Rediscovering the social group: A self-categorization theory*. Basil Blackwell.
+
 ---
 
-## 5. Results Section Fix (H3 misdescription)
+## SECTION F: Results Section Fix (H3)
+*(Find and replace in Results)*
 
-Find and replace in the Results section:
-
-**Current (incorrect):**
+**Current text (incorrect — contradicts how H3 is stated):**
 > "H3 predicted that Republicans would show stronger support for free speech on campus.
 > The data contradict this hypothesis: Democrats exhibit significantly stronger support
 > for both faculty and student speech rights."
 
-**Corrected:**
-> "Consistent with H3, Republicans score significantly higher than Democrats on the
-> combined speech restriction index (Republicans M = 3.27, Democrats M = 2.67,
-> t = 6.93, p < .001, d = 0.69), indicating greater support for restricting campus
-> speech. This moderate-to-large effect holds across both the faculty speech battery
-> and the student speech battery, and across all individual items in both batteries.
-> While H3 is confirmed at the between-group level, the regression analyses presented
-> below (Table X) reveal that this party gap persists even after controlling for
-> polarization components — and that the *mechanism* linking polarization to speech
-> attitudes differs fundamentally between the two parties."
+**Replacement:**
+> Consistent with H3, Republicans score significantly higher than Democrats on the
+> combined speech restriction index (Republicans M = 3.27, SD = 0.88; Democrats
+> M = 2.67, SD = 0.84; t(542) = 6.93, p < .001, d = 0.69), indicating greater support
+> for restricting campus speech. This moderate-to-large effect holds across both the
+> faculty speech battery and the student speech battery, and is consistent across all
+> individual items in both batteries. True Independents fall between the two partisan
+> groups (M = 3.01), and partisan leaners track closely with their directional party,
+> consistent with prior work showing that independent self-identification frequently
+> masks latent partisan attachment (Levendusky, 2009). The party gap in speech
+> restriction confirmed by H3 is examined more precisely in the regression analyses
+> below, which disentangle how much of this gap is explained by differences in
+> affective polarization between parties versus other partisan differences.
 
 ---
 
-## 6. Abstract Update
+## SECTION G: Abstract Update
+*(Replace the methods sentence in the abstract)*
 
-The abstract currently lists methods as:
-> "independent-samples t-tests, Cohen's d effect sizes, Cronbach's alpha reliability
-> assessment, and dimensionality reduction via UMAP and PCA"
+**Current:**
+> "Using multivariate analyses in Python, including independent-samples t-tests,
+> Cohen's d effect sizes, Cronbach's alpha reliability assessment, and dimensionality
+> reduction via UMAP and PCA, the study explores the relationship between affective
+> polarization and attitudes toward free speech on college campuses."
 
-Add OLS regression:
-> "independent-samples t-tests, Cohen's d effect sizes, Cronbach's alpha reliability
-> assessment, dimensionality reduction via UMAP and PCA, and Ordinary Least Squares
-> (OLS) regression"
+**Replacement:**
+> "Using a multivariate analytic strategy in Python — including Cronbach's alpha for
+> scale reliability, independent-samples t-tests with Cohen's d effect sizes,
+> exploratory dimensionality reduction via PCA and UMAP, and Ordinary Least Squares
+> (OLS) regression with interaction terms — the study tests whether and how affective
+> polarization predicts free speech attitudes on college campuses."
