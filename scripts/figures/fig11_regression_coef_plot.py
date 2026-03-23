@@ -1,16 +1,15 @@
 """
 fig11_regression_coef_plot.py
 ==============================
-Figure 11: Regression Coefficient Plot — Affective Polarization Predicting
-Free Speech Restriction
+Figure 11: Does Political Hostility Predict Who Wants to Restrict Speech?
+           Regression Results by Component and Party Group
 
-Shows OLS coefficients (+ 95% CI) for M1 (combined model) and the two
-within-party models (M4-Dem, M4-Rep), plotted side by side as a forest plot.
+Shows OLS regression coefficients + 95% CIs for three models:
+  - Full model (all students, controlling for party)
+  - Democrats only
+  - Republicans only
 
-Interpretation guide baked into the figure:
-  - Dot to the RIGHT of zero → predictor increases restriction
-  - Dot to the LEFT  of zero → predictor decreases restriction (more pro-speech)
-  - CI crossing zero → not significant
+Plain-language reading guide is built into the figure.
 
 Output: visualizations/figure_11_regression_coef_plot.png
 """
@@ -19,6 +18,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+import matplotlib.lines as mlines
 import statsmodels.formula.api as smf
 import warnings
 warnings.filterwarnings("ignore")
@@ -31,113 +31,116 @@ dems = partisan[partisan["party_binary"] == 0].copy()
 reps = partisan[partisan["party_binary"] == 1].copy()
 
 # ─── Fit models ───────────────────────────────────────────────────────────────
-formula_full = ("free_speech_restriction_index ~ "
-                "ap_othering + ap_moral + ap_aversion + party_binary")
-formula_sub  = "free_speech_restriction_index ~ ap_othering + ap_moral + ap_aversion"
+m_full = smf.ols(
+    "free_speech_restriction_index ~ ap_othering + ap_moral + ap_aversion + party_binary",
+    data=partisan).fit()
+m_dem = smf.ols(
+    "free_speech_restriction_index ~ ap_othering + ap_moral + ap_aversion",
+    data=dems).fit()
+m_rep = smf.ols(
+    "free_speech_restriction_index ~ ap_othering + ap_moral + ap_aversion",
+    data=reps).fit()
 
-m_full = smf.ols(formula_full, data=partisan).fit()
-m_dem  = smf.ols(formula_sub,  data=dems).fit()
-m_rep  = smf.ols(formula_sub,  data=reps).fit()
-
-# ─── Extract coefficients (skip Intercept) ────────────────────────────────────
+# ─── Setup ────────────────────────────────────────────────────────────────────
+PLOT_VARS = ["ap_othering", "ap_moral", "ap_aversion"]
 VAR_LABELS = {
-    "ap_othering":   "Othering",
-    "ap_moral":      "Moralizing",
-    "ap_aversion":   "Social Aversion",
-    "party_binary":  "Party (Rep = 1)",
+    "ap_othering": "Othering\n(Sees out-party\nas alien)",
+    "ap_moral":    "Moralizing\n(Sees party\nas moral cause)",
+    "ap_aversion": "Social Aversion\n(Avoids out-party\nmembers)",
 }
-PLOT_VARS = ["ap_othering", "ap_moral", "ap_aversion", "party_binary"]
+MODELS = [
+    ("All students\n(controlling for party)", m_full, "#555555"),
+    ("Democrats only",                         m_dem,  "#2166ac"),
+    ("Republicans only",                        m_rep,  "#d6604d"),
+]
 
-models = {
-    "M1 — Full model\n(Dems + Reps,\nw/ party control)": (m_full, "#555555"),
-    "M4-Dem\n(Democrats only)":                           (m_dem,  "#2166ac"),
-    "M4-Rep\n(Republicans only)":                         (m_rep,  "#d6604d"),
-}
-
-# Build dataframe of [model, variable, B, lo, hi, p]
-rows = []
-for model_label, (m, color) in models.items():
-    ci = m.conf_int()
-    for v in PLOT_VARS:
-        if v not in m.params.index:
-            continue
-        rows.append({
-            "model": model_label, "color": color,
-            "variable": v, "label": VAR_LABELS[v],
-            "B": m.params[v], "lo": ci.loc[v, 0], "hi": ci.loc[v, 1],
-            "p": m.pvalues[v],
-        })
-coef_df = pd.DataFrame(rows)
+ci = {label: m.conf_int() for label, m, _ in MODELS}
 
 # ─── Plot ─────────────────────────────────────────────────────────────────────
-fig, axes = plt.subplots(1, len(PLOT_VARS), figsize=(14, 5), sharey=False)
+fig, axes = plt.subplots(1, 3, figsize=(13, 6), sharey=False)
 fig.patch.set_facecolor("white")
 
-model_labels = list(models.keys())
-n_models = len(model_labels)
-y_positions = np.arange(n_models)
-spacing = 0.28
+y_pos     = np.arange(len(MODELS))
+y_labels  = [label for label, _, _ in MODELS]
 
-for ax_idx, var in enumerate(PLOT_VARS):
-    ax = axes[ax_idx]
-    sub = coef_df[coef_df["variable"] == var].reset_index(drop=True)
+for col_idx, var in enumerate(PLOT_VARS):
+    ax = axes[col_idx]
 
-    for i, row in sub.iterrows():
-        y = y_positions[i]
-        sig = row["p"] < 0.05
+    for row_idx, (label, m, color) in enumerate(MODELS):
+        if var not in m.params.index:
+            continue
+        b  = m.params[var]
+        lo = ci[label].loc[var, 0]
+        hi = ci[label].loc[var, 1]
+        p  = m.pvalues[var]
+        sig = p < 0.05
+
+        # CI line
+        ax.plot([lo, hi], [row_idx, row_idx], color=color, lw=2.5,
+                solid_capstyle="round", alpha=0.85)
+        # Point
         marker = "D" if sig else "o"
-        ms = 8 if sig else 7
-        ax.plot([row["lo"], row["hi"]], [y, y],
-                color=row["color"], lw=2.0, solid_capstyle="round")
-        ax.plot(row["B"], y, marker=marker, ms=ms,
-                color=row["color"], zorder=5,
+        ms     = 9 if sig else 8
+        ax.plot(b, row_idx, marker=marker, ms=ms, color=color, zorder=5,
                 markeredgecolor="white", markeredgewidth=0.8)
 
-        # Annotate B value
-        offset = 0.06 if row["B"] >= 0 else -0.06
-        ha = "left" if row["B"] >= 0 else "right"
-        sig_str = "*" if row["p"] < .05 else ""
-        ax.text(row["B"] + offset, y, f"{row['B']:.3f}{sig_str}",
-                va="center", ha=ha, fontsize=8.5, color=row["color"])
+        # B label
+        sig_str = "*" if p < .05 else ""
+        if p < .001: sig_str = "***"
+        elif p < .01: sig_str = "**"
+        offset = max(abs(hi - lo) * 0.12, 0.04)
+        ha = "left" if b >= 0 else "right"
+        ax.text(b + (offset if b >= 0 else -offset), row_idx,
+                f"B = {b:+.3f}{sig_str}",
+                va="center", ha=ha, fontsize=8.5, color=color, fontweight="bold")
 
-    ax.axvline(0, color="black", lw=0.9, ls="--", alpha=0.5)
-    ax.set_yticks(y_positions)
+    # Zero line (no effect)
+    ax.axvline(0, color="black", lw=1.0, ls="--", alpha=0.55, zorder=1)
+
+    ax.set_yticks(y_pos)
     ax.set_yticklabels(
-        [ml.split("\n")[0] for ml in model_labels] if ax_idx == 0 else [""] * n_models,
-        fontsize=9
+        y_labels if col_idx == 0 else [""] * len(MODELS),
+        fontsize=9.5
     )
-    ax.set_title(VAR_LABELS[var], fontsize=11, fontweight="bold", pad=6)
-    ax.set_xlabel("Coefficient (B)", fontsize=9)
+    ax.set_title(VAR_LABELS[var], fontsize=11, fontweight="bold", pad=8,
+                 linespacing=1.4)
+    ax.set_xlabel("Effect on speech restriction\n(+ = predicts more restriction  |  − = predicts less restriction)",
+                  fontsize=8.5)
     ax.spines[["top", "right"]].set_visible(False)
-    ax.set_ylim(-0.6, n_models - 0.4)
+    ax.set_ylim(-0.7, len(MODELS) - 0.3)
 
-    # Shade region around zero
-    ax_xlim = ax.get_xlim()
+    # Shade the "no effect" region
+    xlim = ax.get_xlim()
+    ax.set_xlim(xlim)
 
-# Add model color legend
-legend_patches = [
-    mpatches.Patch(color=color, label=label.replace("\n", " "))
-    for label, (_, color) in models.items()
-]
-fig.legend(handles=legend_patches, loc="lower center", ncol=3,
-           fontsize=9, framealpha=0.9, bbox_to_anchor=(0.5, -0.04))
+# ─── Legend ───────────────────────────────────────────────────────────────────
+sig_marker   = mlines.Line2D([], [], marker="D", color="black", ms=8,
+                              linestyle="None", label="Statistically significant (p < .05)")
+insig_marker = mlines.Line2D([], [], marker="o", color="black", ms=8,
+                              linestyle="None", label="Not significant (p ≥ .05)")
+fig.legend(handles=[sig_marker, insig_marker], loc="lower center", ncol=2,
+           fontsize=9.5, framealpha=0.9, bbox_to_anchor=(0.5, -0.03))
 
+# ─── Title ────────────────────────────────────────────────────────────────────
 fig.suptitle(
-    "Figure 11: Regression Coefficients — Affective Polarization Predicting Free Speech Restriction\n"
-    "Diamonds (◆) = p < .05 · Circles (●) = n.s. · Error bars = 95% CI · "
-    "Right of zero = more restriction",
-    fontsize=11, fontweight="bold", y=1.01
+    "Figure 11: Does Partisan Hostility Predict Support for Speech Restrictions?\n"
+    "OLS Regression Coefficients (B) ± 95% Confidence Intervals for Each Hostility Component",
+    fontsize=12, fontweight="bold", y=1.02
 )
 
+# ─── How-to-read box ──────────────────────────────────────────────────────────
 note = (
-    "DV: free_speech_restriction_index (1–7, higher = more pro-restriction).\n"
-    "M1 controls for party; M4-Dem and M4-Rep are within-party models.\n"
-    "* p < .05,  ** p < .01,  *** p < .001"
+    "How to read:  Each panel shows one type of partisan hostility.\n"
+    "Each row = one group of students.  The dot is the estimated effect;\n"
+    "the line is the range of plausible values (95% confidence interval).\n"
+    "◆ filled diamond = statistically significant  |  ● circle = not significant\n"
+    "If the line crosses the dashed zero line → no reliable effect.\n"
+    "DV: Free speech restriction scale (1–7); higher = more pro-restriction."
 )
-fig.text(0.5, -0.09, note, ha="center", fontsize=8.5, color="#444444",
-         bbox=dict(boxstyle="round,pad=0.4", fc="#f5f5f5", ec="grey", alpha=0.9))
+fig.text(0.5, -0.12, note, ha="center", fontsize=8.5, color="#333333",
+         bbox=dict(boxstyle="round,pad=0.5", fc="#f5f5f5", ec="grey", alpha=0.9))
 
-plt.tight_layout(rect=[0, 0.0, 1, 1])
+plt.tight_layout(rect=[0, 0.0, 1, 1.0])
 plt.savefig("visualizations/figure_11_regression_coef_plot.png",
             dpi=300, bbox_inches="tight")
 plt.close()

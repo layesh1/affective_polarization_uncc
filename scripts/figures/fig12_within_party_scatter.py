@@ -103,8 +103,8 @@ for col_idx, (iv, iv_label) in enumerate(COMPONENTS):
             ax.set_title(iv_label, fontsize=12, fontweight="bold", pad=8)
 
 fig.suptitle(
-    "Figure 12: Does Affective Polarization Predict Speech Restriction? Within-Party Analysis\n"
-    "Each dot = one student. Shading = 95% bootstrap CI. Dotted lines = group means.",
+    "Figure 12: Does Feeling Hostile Toward the Other Party Predict Wanting to Restrict Speech?\n"
+    "Analyzed separately for Democrats and Republicans  |  Each dot = one student",
     fontsize=12, fontweight="bold", y=1.01
 )
 
@@ -118,7 +118,13 @@ note = (
 # Compute the Rep aversion r for the note
 rep_sub = partisan[partisan["party_3cat"] == "Republican"][["ap_aversion", DV]].dropna()
 r_rep_av, _ = stats.pearsonr(rep_sub["ap_aversion"], rep_sub[DV])
-fig.text(0.5, -0.04, note.format(r_rep_av), ha="center", fontsize=9, color="#333333",
+note2 = (
+    "How to read:  Each panel shows one type of political hostility (columns) for one party (rows).\n"
+    "Upward slope = more hostile students want more speech restrictions.  Flat line = no connection between the two.\n"
+    "Shaded band = 95% confidence interval around the trend line.  Dotted lines = group averages."
+)
+fig.text(0.5, -0.07, note.format(r_rep_av) + "\n\n" + note2,
+         ha="center", fontsize=8.5, color="#333333",
          bbox=dict(boxstyle="round,pad=0.5", fc="#f5f5f5", ec="grey", alpha=0.9))
 
 plt.tight_layout(rect=[0, 0.0, 1, 1])
