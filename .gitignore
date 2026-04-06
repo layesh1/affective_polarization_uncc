@@ -3,6 +3,9 @@ data/
 *.csv
 !data/.gitkeep
 
+# Aggregated summary statistics (no individual-level data) — safe to track
+!Dystopian_Analyses/summary_*.csv
+
 # Keep generated visualizations tracked
 !visualizations/*.png
 

@@ -7,7 +7,7 @@ Outputs (all to Dystopian_Analyses/):
 
   STATISTICAL SUMMARIES (CSV + printed tables)
     summary_descriptives.csv       — Mean, SD, n for all 9 works overall & by party
-    summary_familiarity.csv        — % familiar with each work (overall & by party)
+    summary_familiarity.csv        — % familiar with each work (denominator = those shown section, n=603)
     summary_correlations.csv       — Pearson r, p, n for every dystopian × polarization pair
     summary_party_ttests.csv       — t, p, Cohen's d for Dem vs Rep on every work
     summary_regression.csv         — OLS β, SE, p, 95% CI for both regression models
@@ -89,7 +89,12 @@ dem = df[df['party_cat'] == 'Democrat']
 rep = df[df['party_cat'] == 'Republican']
 ind = df[df['party_cat'] == 'Independent']
 
-TOTAL_N = len(df)   # denominator for familiarity %
+# Denominator for familiarity %: respondents who were shown the dystopian section
+# (those with a non-NaN dystopian_index), not the full 777-row dataset.
+# 174 rows have no dystopian data at all — they were not shown this section.
+TOTAL_N     = int(df['dystopian_index'].notna().sum())          # 603
+DEM_SHOWN_N = int(dem['dystopian_index'].notna().sum())         # 402
+REP_SHOWN_N = int(rep['dystopian_index'].notna().sum())         # 123
 
 
 def save_fig(fig, fname):
@@ -145,8 +150,8 @@ for col, name in WORKS.items():
     fam_rows.append({
         'Work': name,
         'Pct_Familiar_Overall': round(n_familiar_all / TOTAL_N * 100, 1),
-        'Pct_Familiar_Dem':     round(n_familiar_dem / len(dem) * 100, 1) if len(dem) > 0 else np.nan,
-        'Pct_Familiar_Rep':     round(n_familiar_rep / len(rep) * 100, 1) if len(rep) > 0 else np.nan,
+        'Pct_Familiar_Dem':     round(n_familiar_dem / DEM_SHOWN_N * 100, 1) if DEM_SHOWN_N > 0 else np.nan,
+        'Pct_Familiar_Rep':     round(n_familiar_rep / REP_SHOWN_N * 100, 1) if REP_SHOWN_N > 0 else np.nan,
         'n_familiar': n_familiar_all,
     })
 
@@ -318,9 +323,9 @@ save_fig(fig, 'B1_mean_liking_overall.png')
 # ── B2: Familiarity rates by party ────────────────────────────────────────────
 print("\n── B2: FAMILIARITY RATES ──")
 work_order = list(WORKS.values())
-fam_all  = [df[c].notna().sum() / TOTAL_N * 100         for c in WORKS]
-fam_dem  = [dem[c].notna().sum() / len(dem) * 100 if len(dem) > 0 else 0 for c in WORKS]
-fam_rep  = [rep[c].notna().sum() / len(rep) * 100 if len(rep) > 0 else 0 for c in WORKS]
+fam_all  = [df[c].notna().sum()  / TOTAL_N     * 100 for c in WORKS]
+fam_dem  = [dem[c].notna().sum() / DEM_SHOWN_N * 100 if DEM_SHOWN_N > 0 else 0 for c in WORKS]
+fam_rep  = [rep[c].notna().sum() / REP_SHOWN_N * 100 if REP_SHOWN_N > 0 else 0 for c in WORKS]
 
 x = np.arange(len(WORKS)); w = 0.28
 fig, ax = plt.subplots(figsize=(14, 6))

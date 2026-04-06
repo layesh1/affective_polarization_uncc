@@ -1,0 +1,61 @@
+Dystopian_Work,Polarization_Measure,r,p,n,sig
+Hunger Games,Aversion,-0.086,0.0651,462,ns
+Hunger Games,Othering,-0.062,0.1861,462,ns
+Hunger Games,Moralizing,0.04,0.3943,462,ns
+Hunger Games,Partisan Polarization,-0.141,0.0011,529,**
+Hunger Games,FT Gap (D−R),0.101,0.0221,516,*
+Hunger Games,Free Speech,0.138,0.0015,529,**
+Divergent,Aversion,-0.057,0.2959,333,ns
+Divergent,Othering,0.044,0.426,333,ns
+Divergent,Moralizing,0.125,0.0229,333,*
+Divergent,Partisan Polarization,-0.051,0.3182,383,ns
+Divergent,FT Gap (D−R),0.1,0.0538,370,ns
+Divergent,Free Speech,0.134,0.0086,383,**
+Maze Runner,Aversion,-0.133,0.0094,379,**
+Maze Runner,Othering,0.027,0.6032,379,ns
+Maze Runner,Moralizing,-0.026,0.6122,379,ns
+Maze Runner,Partisan Polarization,-0.136,0.0041,441,**
+Maze Runner,FT Gap (D−R),0.093,0.0552,429,ns
+Maze Runner,Free Speech,0.178,0.0002,441,***
+Black Mirror,Aversion,-0.019,0.7462,283,ns
+Black Mirror,Othering,0.065,0.2722,283,ns
+Black Mirror,Moralizing,0.119,0.0454,283,*
+Black Mirror,Partisan Polarization,-0.028,0.6183,329,ns
+Black Mirror,FT Gap (D−R),0.125,0.0264,317,*
+Black Mirror,Free Speech,0.146,0.0079,329,**
+Last of Us,Aversion,0.029,0.6251,289,ns
+Last of Us,Othering,0.061,0.2984,289,ns
+Last of Us,Moralizing,0.09,0.1286,289,ns
+Last of Us,Partisan Polarization,-0.082,0.1306,340,ns
+Last of Us,FT Gap (D−R),0.162,0.0032,327,**
+Last of Us,Free Speech,0.117,0.0309,340,*
+The 100,Aversion,-0.052,0.3898,272,ns
+The 100,Othering,0.103,0.0914,272,ns
+The 100,Moralizing,0.169,0.0053,272,**
+The 100,Partisan Polarization,-0.066,0.2429,313,ns
+The 100,FT Gap (D−R),0.095,0.1006,303,ns
+The 100,Free Speech,0.214,0.0001,313,***
+1984,Aversion,-0.192,0.0008,300,***
+1984,Othering,-0.073,0.206,300,ns
+1984,Moralizing,0.13,0.024,300,*
+1984,Partisan Polarization,-0.167,0.0018,347,**
+1984,FT Gap (D−R),0.06,0.2749,336,ns
+1984,Free Speech,0.226,0.0,347,***
+The Giver,Aversion,-0.138,0.0157,305,*
+The Giver,Othering,-0.02,0.7337,305,ns
+The Giver,Moralizing,0.081,0.1596,305,ns
+The Giver,Partisan Polarization,-0.142,0.0071,356,**
+The Giver,FT Gap (D−R),0.113,0.0363,346,*
+The Giver,Free Speech,0.135,0.0109,356,*
+Fahrenheit 451,Aversion,-0.002,0.9743,303,ns
+Fahrenheit 451,Othering,0.041,0.4731,303,ns
+Fahrenheit 451,Moralizing,0.213,0.0002,303,***
+Fahrenheit 451,Partisan Polarization,-0.015,0.7747,345,ns
+Fahrenheit 451,FT Gap (D−R),0.122,0.0254,334,*
+Fahrenheit 451,Free Speech,0.257,0.0,345,***
+Dystopian Index,Aversion,-0.111,0.0113,525,*
+Dystopian Index,Othering,-0.025,0.5621,525,ns
+Dystopian Index,Moralizing,0.093,0.0336,525,*
+Dystopian Index,Partisan Polarization,-0.116,0.0042,603,**
+Dystopian Index,FT Gap (D−R),0.101,0.014,586,*
+Dystopian Index,Free Speech,0.161,0.0001,603,***
