@@ -1,7 +1,7 @@
 """
 00_data_preparation.py
 ======================
-Master data preparation script for the Affective Polarization study.
+Data preparation script for the Affective Polarization study.
 Loads the raw Qualtrics export, applies all scale mappings and reverse coding,
 and saves a cleaned analysis-ready DataFrame.
 
